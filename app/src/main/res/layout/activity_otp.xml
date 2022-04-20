@@ -5,24 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-    android:orientation="vertical"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.OtpActivity">
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Verified Login"
+            android:layout_margin="20dp"
+            android:text="Verify OTP"
             android:textColor="@color/purple_700"
-            android:textSize="50dp"
-            android:textStyle="bold" />
+            android:textSize="30dp" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -30,7 +28,7 @@
             android:layout_margin="20dp"
             android:clickable="true"
             android:focusable="true"
-            app:cardCornerRadius="5dp"
+            app:cardCornerRadius="2dp"
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp">
 
@@ -39,37 +37,29 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                <com.devine.ecommerceapp.utils.PinEntryEditText
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp">
+                    android:layout_margin="30dp"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:outlineAmbientShadowColor="@color/purple_700"
+                    android:maxLength="6"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                         android:inputType="phone"
-                        android:id="@+id/edit_number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Enter Mobile Number " />
-
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_otp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_margin="30dp"
+                    android:layout_margin="20dp"
                     android:background="@drawable/custom_btn"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="GET OTP"
+                    android:text="verifiy"
                     android:textColor="#fff" />
             </androidx.appcompat.widget.LinearLayoutCompat>
+
         </com.google.android.material.card.MaterialCardView>
-
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </RelativeLayout>
